@@ -52,12 +52,12 @@ pub struct HanafudaCard {
 impl HanafudaCard {
     pub fn new(month: Month, plant: Plant, face: String, card_type: CardType, value: u8, image_path: String) -> Self {
         HanafudaCard {
-            month: month,
-            plant: plant,
-            face: face,
-            card_type: card_type,
-            value: value,
-            image_path: image_path
+            month,
+            plant,
+            face,
+            card_type,
+            value,
+            image_path
         }
     }
 }

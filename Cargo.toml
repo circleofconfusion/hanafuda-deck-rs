@@ -1,5 +1,5 @@
 [package]
-name = "hanafuda-deck-rs"
+name = "hanafuda_deck_rs"
 version = "0.1.0"
 authors = ["Shane Knudsen <shaneknu@gmail.com>"]
 edition = "2018"

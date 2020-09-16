@@ -41,12 +41,12 @@ pub enum CardType {
 }
 
 pub struct HanafudaCard {
-    month: Month,
-    plant: Plant,
-    face: String,
-    card_type: CardType,
-    value: u8,
-    image_path: String
+    pub month: Month,
+    pub plant: Plant,
+    pub face: String,
+    pub card_type: CardType,
+    pub value: u8,
+    pub image_path: String
 }
 
 impl HanafudaCard {
@@ -75,7 +75,7 @@ impl PartialOrd for HanafudaCard {
 }
 
 pub struct HanafudaDeck {
-    cards: Vec<HanafudaCard>
+    pub cards: Vec<HanafudaCard>
 }
 
 impl HanafudaDeck {

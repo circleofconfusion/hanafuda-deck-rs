@@ -1,3 +1,7 @@
+extern crate gdk_pixbuf;
+
+use gdk_pixbuf::Pixbuf;
+
 use std::cmp::Ordering;
 use rand::Rng;
 pub enum Month {
@@ -46,18 +50,19 @@ pub struct HanafudaCard {
     pub face: String,
     pub card_type: CardType,
     pub value: u8,
-    pub image_path: String
+    pub image: Pixbuf
 }
 
 impl HanafudaCard {
-    pub fn new(month: Month, plant: Plant, face: String, card_type: CardType, value: u8, image_path: String) -> Self {
+    pub fn new(month: Month, plant: Plant, face: String, card_type: CardType, value: u8, filename: String) -> Self {
+        let image = Pixbuf::from_file(filename).expect("invalid card image");
         HanafudaCard {
             month,
             plant,
             face,
             card_type,
             value,
-            image_path
+            image 
         }
     }
 }

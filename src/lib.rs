@@ -50,12 +50,12 @@ pub struct HanafudaCard {
     pub face: String,
     pub card_type: CardType,
     pub value: u8,
-    pub image: Pixbuf
+    pub image: Option<Pixbuf>
 }
 
 impl HanafudaCard {
     pub fn new(month: Month, plant: Plant, face: String, card_type: CardType, value: u8, filename: String) -> Self {
-        let image = Pixbuf::from_file(filename).expect("invalid card image");
+        let image = Some(Pixbuf::from_file(filename).expect("invalid card image"));
         HanafudaCard {
             month,
             plant,

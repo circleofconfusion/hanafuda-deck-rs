@@ -142,3 +142,18 @@ impl HanafudaDeck {
         }
     }
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn name() {
+        let card = HanafudaCard::new(Month::January, Plant::Pine, String::from("Crane with sun"), CardType::Bright, 20, include_bytes!("res/img/01.png"));
+        assert_eq!(card.image_raw_bytes[0], 137);
+        assert_eq!(card.image_raw_bytes[1], 80);
+        assert_eq!(card.image_raw_bytes[2], 78);
+        assert_eq!(card.image_raw_bytes[3], 71);
+    }
+}
